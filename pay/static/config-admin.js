@@ -1,6 +1,5 @@
 var BASE_URL = CONFIG.BASE_URL+"/" //document.scripts[document.scripts.length - 1].src.substring(0, document.scripts[document.scripts.length - 1].src.lastIndexOf("/") + 1);
 window.BASE_URL = BASE_URL;
-if (CONFIG.IS_DEBUG) alert(BASE_URL);
 require.config({
     urlArgs: "v=" + CONFIG.VERSION,
     baseUrl: BASE_URL,
@@ -23,6 +22,7 @@ require.config({
         "autocomplete": ["plugs/lay-module/autocomplete/autocomplete"],
         "vue": ["plugs/vue-2.6.10/vue.min"],
         "ckeditor": ["plugs/ckeditor4/ckeditor"],
+        "qrcode": ["plugs/qrcode/qrcode.min"],
     }
 });
 
@@ -34,8 +34,7 @@ window.PATH_CONFIG = PATH_CONFIG;
 
 // 初始化控制器对应的JS自动加载
 if ("undefined" != typeof CONFIG.AUTOLOAD_JS && CONFIG.AUTOLOAD_JS) {
-    if (CONFIG.IS_DEBUG) alert(BASE_URL + CONFIG.CONTROLLER_JS_PATH);
-    require(["https://cdn.jsdelivr.net/gh/licha8888/cdn@1.02/pay/static/admin/js/supplier/qrcode.js"], function (Controller) {
+    require([BASE_URL + CONFIG.CONTROLLER_JS_PATH], function (Controller) {
         if (eval('Controller.' + CONFIG.ACTION)) {
             eval('Controller.' + CONFIG.ACTION + '()');
         }
