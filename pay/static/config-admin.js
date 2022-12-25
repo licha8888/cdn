@@ -1,5 +1,6 @@
 var BASE_URL = CONFIG.BASE_URL+"/" //document.scripts[document.scripts.length - 1].src.substring(0, document.scripts[document.scripts.length - 1].src.lastIndexOf("/") + 1);
 window.BASE_URL = BASE_URL;
+if (CONFIG.IS_DEBUG) alert(BASE_URL);
 require.config({
     urlArgs: "v=" + CONFIG.VERSION,
     baseUrl: BASE_URL,
@@ -32,6 +33,7 @@ var PATH_CONFIG = {
 window.PATH_CONFIG = PATH_CONFIG;
 
 // 初始化控制器对应的JS自动加载
+if (CONFIG.IS_DEBUG) alert(CONFIG.AUTOLOAD_JS);
 if ("undefined" != typeof CONFIG.AUTOLOAD_JS && CONFIG.AUTOLOAD_JS) {
     require([BASE_URL + CONFIG.CONTROLLER_JS_PATH], function (Controller) {
         if (eval('Controller.' + CONFIG.ACTION)) {
