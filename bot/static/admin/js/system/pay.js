@@ -23,7 +23,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'nickname', title: '名字'},
                     {field: 'period', title: '周期', search_ignore: true,
                         templet: function (data, option) {
-                            return ['15天', '一个月', '三个月'][data.period];
+                            return ['15天', '一个月', '三个月', '六个月'][data.period];
                         },
                     },
                     {field: 'quant', title: '金额', search_ignore: true, templet:
