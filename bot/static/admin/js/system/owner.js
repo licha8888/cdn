@@ -18,7 +18,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {width: 150, field: 'userid', title: '用户ID'},
                     {width: 150, field: 'username', title: '用户名'},
                     {field: 'nickname', title: '名字'},
                     {width: 150, field: 'botnickname', title: '授权机器人'},
@@ -36,7 +35,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'grantnickname', title: '授权人'},
                     {width: 180, field: 'expire_time_text', title: '过期时间', search_ignore:true},
                     {field: 'remark', title: '备注', templet: ea.table.text, search_ignore:true},
-                    {width: 200, title: '操作', templet: ea.table.tool, operat:['edit', [
+                    {width: 50, title: '操作', templet: ea.table.tool, operat:['edit', [
                             {
                                 //easy-admin.js L563 tool 方法下，参考 edit 的参数设置
                                 //这里 templet: ea.table.tool 意思就是用 tool 方法进行渲染 operat 是参数
