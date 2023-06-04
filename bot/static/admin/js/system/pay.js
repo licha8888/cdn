@@ -21,6 +21,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'id', title: '订单ID'},
                     {field: 'username', title: '用户名'},
                     {field: 'nickname', title: '名字'},
+                    {field: 'botnickname', title: '机器人'},
                     {field: 'period', title: '周期', search_ignore: true,
                         templet: function (data, option) {
                             return ['15天', '一个月', '三个月', '六个月'][data.period];
@@ -31,7 +32,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return data.quant / 1000
                         },
                     },
-                    {field: 'create_time', title: '创建时间', search_ignore: true},
+                    {width:180, field: 'create_time', title: '创建时间', search_ignore: true},
                     {field: 'status', title: '状态', search: 'select',selectList: [[0, "未支付"], [1, "已支付"], [2, "已过期"]],
                         templet: function (data, option) {
                             var status = [

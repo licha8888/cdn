@@ -21,6 +21,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {width: 150, field: 'userid', title: '用户ID'},
                     {width: 150, field: 'username', title: '用户名'},
                     {field: 'nickname', title: '名字'},
+                    {width: 150, field: 'botnickname', title: '授权机器人'},
                     {field: 'grantcount', title: '剩余授权'},
                     {field: 'granttype', title: '用户类型', 
                         templet: function (data, option) {
