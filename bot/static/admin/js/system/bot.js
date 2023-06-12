@@ -20,6 +20,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'botid', title: '机器人ID'},
                     {field: 'botnickname', title: '机器人名字'},
                     {field: 'botusername', title: '机器人用户名'},
+                    {field: 'adminname', title: '所属用户'},
                     {field: 'create_time', title: '启动时间', search_ignore: true},
                     {field: 'status', title: '状态', templet: ea.table.switch, search_ignore: true},
                     {field: 'remark', title: '备注说明', templet: ea.table.text, search_ignore: true},
