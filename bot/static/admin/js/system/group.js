@@ -69,6 +69,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         'edit',
                         [
                             {
+                                auth: 'bill',
                                 class: 'layui-btn layui-btn-normal layui-btn-xs',
                                 text: '查看账单',
                                 method: 'blank',
