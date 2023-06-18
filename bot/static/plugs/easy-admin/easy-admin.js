@@ -627,7 +627,7 @@ define(["jquery", "tableSelect", "ckeditor"], function ($, tableSelect, undefine
                             
                             operat.icon = operat.icon || '';
                             operat.auth = operat.auth || '';
-                            operat.url = operat.url || '';
+                            operat.url = (typeof operat.url === 'function') ? operat.url(data) : (operat.url || '');
                             operat.method = operat.method || 'open';
                             operat.field = operat.field || 'id';
                             operat.exist_field = (typeof(operat.exist_field)=="undefined") ? 1 : operat.exist_field

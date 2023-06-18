@@ -72,7 +72,9 @@ define(["jquery", "easy-admin"], function ($, ea) {
                                 class: 'layui-btn layui-btn-normal layui-btn-xs',
                                 text: '查看账单',
                                 method: 'blank',
-                                url: '/admin/ht/bill',
+                                url: function (data) {
+                                    return data.bill_url
+                                },
                             },
                         ],
                     ]},
