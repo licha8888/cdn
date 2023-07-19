@@ -58,7 +58,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             {
                                 class: 'layui-btn layui-btn-normal layui-btn-xs',
                                 text: '一月',
-                                title: '有效期延长15天一个月吗？',
+                                title: '有效期延长一个月吗？',
                                 method: 'get',
                                 url: 'system.owner/period?month=1',
                                 auth: 'period',
