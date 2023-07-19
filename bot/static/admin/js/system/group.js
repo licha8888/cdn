@@ -66,7 +66,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     //{width: 95, field: 'status', title: '状态', templet: ea.table.switch, tips: '正常|禁用', templet: ea.table.switch, search_ignore: true},
                     {width: 180, field: 'update_time_text', title: '更新时间', search: 'range'},
                     {title: '操作', templet: ea.table.tool, operat:[
-                        'edit',
                         [
                             {
                                 auth: 'bill',
@@ -78,6 +77,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                                 },
                             },
                         ],
+                        'edit',
                     ]},
                 ]],
             });
