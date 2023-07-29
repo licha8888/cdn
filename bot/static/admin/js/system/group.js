@@ -19,11 +19,13 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 toolbar: ['refresh', 'export'],
                 cols: [[
                     {width: 150, field: 'groupname', title: '群名称'},
+                    /*
                     {width: 75, field: 'category.name', title: '群分类', templet:
                         function (data, option) {
                             return data.category ? data.category.name : '未分类'
                         },
                     },
+                    */
                     {field: 'ownernickname', title: '权限人'},
                     {field: 'botnickname', title: '机器人'},
                     {width: 90, field: 'depositcount', title: '入款笔数', templet:
@@ -63,9 +65,9 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return parseInt(data.usdt)
                         },
                         search_ignore: true},
-                    //{width: 95, field: 'status', title: '状态', templet: ea.table.switch, tips: '正常|禁用', templet: ea.table.switch, search_ignore: true},
-                    {width: 180, field: 'update_time_text', title: '更新时间', search: 'range'},
-                    {title: '操作', templet: ea.table.tool, operat:[
+                    {width: 105, field: 'create_time_text', title: '创建时间', search: 'range'},
+                    {width: 105, field: 'update_time_text', title: '更新时间', search: 'range'},
+                    {width: 130, title: '操作', templet: ea.table.tool, operat:[
                         [
                             {
                                 auth: 'bill',

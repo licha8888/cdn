@@ -33,6 +33,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                     },
                     {field: 'grantnickname', title: '授权人'},
+                    {width: 180, field: 'create_time_text', title: '创建时间', search_ignore:true},
                     {width: 180, field: 'expire_time_text', title: '过期时间', search_ignore:true},
                     {field: 'remark', title: '备注', templet: ea.table.text, search_ignore:true},
                     {width: 200, title: '操作', templet: ea.table.tool, operat:['edit', [
