@@ -20,9 +20,10 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 cols: [[
                     {width:200, field: 'groupname', title: '群名称'},
                     {width:150, field: 'operatorname', title: '发送人'},
+                    {width:120, field: 'botnickname', title: '机器人'},
                     {field: 'content', title: '消息内容', templet: ea.table.text},
                     {width:165, field: 'create_time', title: '发送时间', search: 'range'},
-                    {field: 'marked', title: '关注', templet: ea.table.switch, search: 'select', selectList: [[0, "未关注"], [1, "已关注"]],},
+                    {width:80, field: 'marked', title: '关注', templet: ea.table.switch, search: 'select', selectList: [[0, "未关注"], [1, "已关注"]],},
                     {width: 65, title: '操作', templet: ea.table.tool, operat: ['edit']},
                 ]],
             });
