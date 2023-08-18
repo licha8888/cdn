@@ -18,7 +18,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {width:200, field: 'groupname', title: '群名称'},
+                    {width:220, field: 'groupname', title: '群名称'},
                     {width:120, field: 'botnickname', title: '机器人'},
                     {width:150, field: 'operatorname', title: '发送人'},
                     {field: 'content', title: '消息内容', templet: ea.table.text},

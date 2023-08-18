@@ -18,7 +18,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {width: 180, field: 'groupname', title: '群名称'},
+                    {width: 220, field: 'groupname', title: '群名称'},
                     {field: 'replyname', title: '回复人', search_ignore: true},
                     {field: 'operatorname', title: '操作人', search_ignore: true},
                     {field: 'billtype', title: '类型', templet:

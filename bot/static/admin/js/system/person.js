@@ -18,7 +18,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {field: 'groupname', title: '群组名称'},
+                    {width:220, field: 'groupname', title: '群组名称'},
                     {field: 'userid', title: '用户ID', search_ignore: true},
                     {field: 'username', title: '用户名'},
                     {field: 'nickname', title: '名字'},
