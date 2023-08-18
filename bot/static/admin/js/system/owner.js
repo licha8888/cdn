@@ -21,8 +21,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {width: 150, field: 'username', title: '用户名'},
                     {field: 'nickname', title: '名字'},
                     {width: 150, field: 'botnickname', title: '授权机器人'},
-                    {field: 'grantcount', title: '剩余授权'},
-                    {field: 'granttype', title: '用户类型', 
+                    {width: 95, field: 'grantcount', title: '剩余授权'},
+                    {width: 95, field: 'granttype', title: '用户类型', 
                         templet: function (data, option) {
                             var type = [
                                 '<span class="layui-badge layui-bg-gray">试用</span>',
@@ -32,7 +32,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return type[data.granttype];
                         },
                     },
-                    {field: 'grantnickname', title: '授权人'},
+                    {width: 95, field: 'grantnickname', title: '授权人'},
                     {width: 180, field: 'create_time_text', title: '创建时间', search_ignore:true},
                     {width: 180, field: 'expire_time_text', title: '过期时间', search_ignore:true},
                     {width: 80, field: 'billstatus', title: '记账', templet: ea.table.switch, tips: '开|关',  search_ignore:true},

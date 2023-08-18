@@ -24,8 +24,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return data.category ? data.category.name : '未分类'
                         },
                     },
-                    {field: 'ownernickname', title: '权限人'},
-                    {field: 'botnickname', title: '机器人'},
+                    {width: 90, field: 'ownernickname', title: '权限人'},
+                    {width: 120, field: 'botnickname', title: '机器人'},
                     {width: 90, field: 'depositcount', title: '入款笔数', templet:
                         function (data, option) {                            
                             return data.depositcount // + " / " + data.adjustdepositcount
@@ -65,7 +65,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         search_ignore: true},
                     {width: 105, field: 'create_time_text', title: '创建时间', search: 'range'},
                     {width: 105, field: 'update_time_text', title: '更新时间', search: 'range'},
-                    {width: 130, title: '操作', templet: ea.table.tool, operat:[
+                    {width: 165, title: '操作', templet: ea.table.tool, operat:[
                         [
                             {
                                 auth: 'bill',
