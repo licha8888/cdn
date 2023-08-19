@@ -19,7 +19,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 toolbar: ['refresh', 'export'],
                 cols: [[
                     {width: 150, field: 'username', title: '用户名'},
-                    {field: 'nickname', title: '名字'},
+                    {width: 150, field: 'nickname', title: '名字'},
                     {width: 150, field: 'botnickname', title: '授权机器人'},
                     {width: 95, field: 'grantcount', title: '剩余授权'},
                     {width: 95, field: 'granttype', title: '用户类型', 
@@ -32,7 +32,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return type[data.granttype];
                         },
                     },
-                    {width: 95, field: 'grantnickname', title: '授权人'},
+                    {width: 150, field: 'grantnickname', title: '授权人'},
                     {width: 180, field: 'create_time_text', title: '创建时间', search_ignore:true},
                     {width: 180, field: 'expire_time_text', title: '过期时间', search_ignore:true},
                     {width: 80, field: 'billstatus', title: '记账', templet: ea.table.switch, tips: '开|关',  search_ignore:true},
