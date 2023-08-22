@@ -24,6 +24,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'operate', title: '执行操作'},
                     {field: 'remark', title: '操作数据', search_ignore: true},
                     {field: 'create_time', title: '时间', search_ignore: true},
+                    {title: '操作', templet: ea.table.tool},
                 ]],
             });
 
