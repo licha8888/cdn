@@ -24,7 +24,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'worktime', title: '日切时间'},
                     {field: 'showmode', title: '显示模式'},
                     {field: 'autoclear', title: '自动日切', templet: ea.table.switch, search_ignore: true},
-                    {field: 'spy', title: '监控', templet: ea.table.switch, search_ignore: true},
+                    {field: 'spy', title: '监控提示', templet: ea.table.switch, search_ignore: true},
                     {field: 'status', title: '状态', templet: ea.table.switch, search_ignore: true},
                     {width:108, field: 'create_time_text', title: '启动时间', search_ignore: true},
                     {field: 'remark', title: '备注说明', templet: ea.table.text, search_ignore: true},
