@@ -19,9 +19,10 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 cols: [[
                     {width:70, field: 'row', title: '行号', search_ignore: true},
                     {width:200, field: 'title', title: '按钮标题'},
-                    {width:550, field: 'url', title: '按钮链接'},
-                    {field: 'status', title: '状态', templet: ea.table.switch, search_ignore: true},
-                    {width: 200, field: 'create_time', title: '创建时间', search: 'range'},
+                    {field: 'url', title: '按钮链接'},
+                    {width:265, field: 'botlist', title: '机器人'},
+                    {width:80, field: 'status', title: '状态', templet: ea.table.switch, search_ignore: true},
+                    {width: 165, field: 'create_time', title: '创建时间', search: 'range'},
                     {width: 150, title: '操作', templet: ea.table.tool},
                 ]],
             });
