@@ -32,11 +32,36 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                         search_ignore: true
                     },
-                    {width: 115, field: 'totaldeposit', title: '总入款', search_ignore: true},
-                    {width: 115, field: 'totalwithdraw', title: '总下发', search_ignore: true},
-                    {width: 115, field: 'shouldwithdraw', title: '应下发', search_ignore: true},
-                    {width: 60, field: 'fee', title: '费率', search_ignore: true},
-                    {width: 90, field: 'usdt', title: '美元汇率', search_ignore: true},                    
+                    {width: 115, field: 'totaldeposit', title: '总入款', templet:
+                        function (data, option) {
+                            return parseFloat(data.totaldeposit)
+                        },
+                        search_ignore: true
+                    },
+                    {width: 115, field: 'totalwithdraw', title: '总下发', templet:
+                        function (data, option) {
+                            return parseFloat(data.totalwithdraw)
+                        },
+                        search_ignore: true
+                    },
+                    {width: 115, field: 'shouldwithdraw', title: '应下发', templet:
+                        function (data, option) {
+                            return parseFloat(data.shouldwithdraw)
+                        },
+                        search_ignore: true
+                    },
+                    {width: 60, field: 'fee', title: '费率', templet:
+                        function (data, option) {
+                            return parseFloat(data.fee)
+                        },
+                        search_ignore: true
+                    },
+                    {width: 90, field: 'usdt', title: '美元汇率', templet:
+                        function (data, option) {
+                            return parseFloat(data.usdt)
+                        },
+                        search_ignore: true
+                    },
                     {field: 'remark', title: '备注', templet: ea.table.text},
                 ]],
             });

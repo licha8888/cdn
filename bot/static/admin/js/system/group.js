@@ -40,29 +40,34 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     },
                     {width: 90, field: 'totaldeposit', title: '总入款', templet:
                         function (data, option) {
-                            return parseInt(data.totaldeposit)
+                            return parseFloat(data.totaldeposit)
                         },
-                        search_ignore: true},
+                        search_ignore: true
+                    },
                     {width: 90, field: 'totalwithdraw', title: '总下发', templet:
                         function (data, option) {
-                            return parseInt(data.totalwithdraw)
+                            return parseFloat(data.totalwithdraw)
                         },
-                        search_ignore: true},
+                        search_ignore: true
+                    },
                     {width: 90, field: 'shouldwithdraw', title: '应下发', templet:
                         function (data, option) {
-                            return parseInt(data.totaldeposit)
+                            return parseFloat(data.totaldeposit)
                         },
-                        search_ignore: true},
+                        search_ignore: true
+                    },
                     {width: 60, field: 'fee', title: '费率', templet:
                         function (data, option) {
-                            return parseInt(data.fee)
+                            return parseFloat(data.fee)
                         },
-                        search_ignore: true},
+                        search_ignore: true
+                    },
                     {width: 90, field: 'usdt', title: '美元汇率', templet:
                         function (data, option) {
-                            return parseInt(data.usdt)
+                            return parseFloat(data.usdt)
                         },
-                        search_ignore: true},
+                        search_ignore: true
+                    },
                     {width: 105, field: 'create_time_text', title: '创建时间', search: 'range'},
                     {width: 105, field: 'update_time_text', title: '更新时间', search: 'range'},
                     {width: 165, title: '操作', templet: ea.table.tool, operat:[

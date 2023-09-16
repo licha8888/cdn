@@ -34,10 +34,30 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         selectList: [['deposit', '入款'], ['withdraw', '下发'], ['adjust_deposit', '入款修正'], ['adjust_withdraw', '下发修正']],
                         search_ignore: true,
                     },
-                    {field: 'rmb', title: '金额', search_ignore: true},
-                    {field: 'rate', title: '汇率', search_ignore: true},
-                    {field: 'usdt', title: 'USDT', search_ignore: true},
-                    {field: 'fee', title: '费率', search_ignore: true},
+                    {field: 'rmb', title: '金额', templet:
+                        function (data, option) {
+                            return parseFloat(data.rmb)
+                        },
+                        search_ignore: true
+                    },
+                    {field: 'rate', title: '汇率', templet:
+                        function (data, option) {
+                            return parseFloat(data.rate)
+                        },
+                        search_ignore: true
+                    },
+                    {field: 'usdt', title: 'USDT', templet:
+                        function (data, option) {
+                            return parseFloat(data.usdt)
+                        },
+                        search_ignore: true
+                    },
+                    {field: 'fee', title: '费率', templet:
+                        function (data, option) {
+                            return parseFloat(data.fee)
+                        },
+                        search_ignore: true
+                    },
                     {width: 165, field: 'create_time', title: '时间', search: 'range'},
                     {field: 'remark', title: '备注', templet: ea.table.text},
                     {width: 100, title: '操作', templet: ea.table.tool, operat:['edit']},
