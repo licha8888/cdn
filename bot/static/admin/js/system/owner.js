@@ -18,9 +18,9 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {width: 150, field: 'username', title: '用户名'},
-                    {width: 150, field: 'nickname', title: '名字'},
                     {width: 150, field: 'botnickname', title: '授权机器人'},
+                    {width: 150, field: 'nickname', title: '名字'},
+                    {width: 150, field: 'username', title: '用户名'},
                     {width: 95, field: 'grantcount', title: '剩余授权'},
                     {width: 95, field: 'granttype', title: '用户类型', 
                         templet: function (data, option) {
