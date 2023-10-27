@@ -33,11 +33,10 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                     },
                     {width: 150, field: 'grantnickname', title: '授权人'},
-                    {width: 180, field: 'create_time_text', title: '创建时间', search_ignore:true},
+                    {width: 110, field: 'create_time_text', title: '创建时间', search_ignore:true},
                     {width: 180, field: 'expire_time_text', title: '过期时间', search_ignore:true},
                     {width: 80, field: 'billstatus', title: '记账', templet: ea.table.switch, tips: '开|关',  search_ignore:true},
-                    {field: 'remark', title: '备注', templet: ea.table.text, search_ignore:true},
-                    {width: 200, title: '操作', templet: ea.table.tool, operat:['edit', [
+                    {title: '操作', templet: ea.table.tool, operat:['edit', /*[
                             {
                                 //easy-admin.js L563 tool 方法下，参考 edit 的参数设置
                                 //这里 templet: ea.table.tool 意思就是用 tool 方法进行渲染 operat 是参数
@@ -65,7 +64,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                                 url: 'system.owner/period?month=1',
                                 auth: 'period',
                             },
-                            /*
                             {
                                 class: 'layui-btn layui-btn-danger layui-btn-xs',
                                 text: '停用',
@@ -74,8 +72,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                                 url: 'system.owner/disable',
                                 auth: 'period',
                             },
-                            */
-                        ]
+                        ]*/
                     ]},
                 ]],
             });
