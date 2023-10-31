@@ -18,33 +18,33 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {width: 260, field: 'groupname', title: '群名称'},
-                    {width: 110, field: 'date', title: '日期', search: 'range'},
-                    {width: 90, field: 'depositcount', title: '入款笔数', templet:
+                    {field: 'groupname', title: '群名称'},
+                    {width: 150, field: 'date', title: '日期', search: 'range'},
+                    {width: 120, field: 'depositcount', title: '入款笔数', templet:
                         function (data, option) {                            
                             return data.depositcount + " / " + data.adjustdepositcount
                         },
                         search_ignore: true
                     },
-                    {width: 90, field: 'withdrawcount', title: '下发笔数', templet:
+                    {width: 120, field: 'withdrawcount', title: '下发笔数', templet:
                         function (data, option) {                            
                             return data.withdrawcount + " / " + data.adjustwithdrawcount
                         },
                         search_ignore: true
                     },
-                    {width: 115, field: 'totaldeposit', title: '总入款', templet:
+                    {width: 135, field: 'totaldeposit', title: '总入款', templet:
                         function (data, option) {
                             return parseFloat(data.totaldeposit)
                         },
                         search_ignore: true
                     },
-                    {width: 115, field: 'totalwithdraw', title: '总下发', templet:
+                    {width: 135, field: 'totalwithdraw', title: '总下发', templet:
                         function (data, option) {
                             return parseFloat(data.totalwithdraw)
                         },
                         search_ignore: true
                     },
-                    {width: 115, field: 'shouldwithdraw', title: '应下发', templet:
+                    {width: 135, field: 'shouldwithdraw', title: '应下发', templet:
                         function (data, option) {
                             return parseFloat(data.shouldwithdraw)
                         },
@@ -62,7 +62,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                         search_ignore: true
                     },
-                    {field: 'remark', title: '备注', templet: ea.table.text},
                 ]],
             });
 

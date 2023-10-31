@@ -23,7 +23,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'botnickname', title: '机器人'},
                     {field: 'content', title: '聊天内容'},
                     {field: 'create_time', title: '操作时间', search: 'range', search_ignore: true},
-                    {width: 250, title: '操作', templet: ea.table.tool},
+                    {width:115, title: '操作', templet: ea.table.tool},
 
                 ]],
             });

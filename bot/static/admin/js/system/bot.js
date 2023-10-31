@@ -18,10 +18,9 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 cols: [[
                     {width:108, field: 'botid', title: '机器人ID'},
-                    {width:180, field: 'botnickname', title: '机器人名字'},
+                    {field: 'botnickname', title: '机器人名字'},
                     {width:118, field: 'botusername', title: '机器人用户名'},
                     {width:118, field: 'adminname', title: '所属用户'},
-                    {width:118, field: 'showmode', title: '显示模式'},
                     {width:100, field: 'bankinquire', title: '银行卡查询', templet: ea.table.switch, search_ignore: true},
                     {width:118, field: 'bankinquirecount', title: '查询次数'},
                     {width:145, field: 'expire_time_text', title: '过期时间', templet:
@@ -32,7 +31,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     },
                     {width:108, field: 'create_time_text', title: '启动时间', search_ignore: true},
                     {width:85, field: 'status', title: '状态', templet: ea.table.switch, search_ignore: true},
-                    {title: '操作', templet: ea.table.tool, operat:['edit']}
+                    {width:85, title: '操作', templet: ea.table.tool, operat:['edit']}
                 ]],
             });
 

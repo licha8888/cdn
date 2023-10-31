@@ -18,12 +18,12 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {field: 'groupname', title: '群组名', search_ignore: true},
-                    {field: 'nickname', title: '名字'},
-                    {field: 'username', title: '用户名'},
+                    {width:165, field: 'groupname', title: '群组名', search_ignore: true},
+                    {width:125, field: 'nickname', title: '名字'},
+                    {width:195, field: 'username', title: '用户名'},
                     {field: 'remark', title: '备注说明', templet: ea.table.text},
-                    {width:180, field: 'create_time', title: '创建时间', search: 'range'},
-                    {title: '操作', templet: ea.table.tool},
+                    {width:165, field: 'create_time', title: '创建时间', search: 'range'},
+                    {width:115, title: '操作', templet: ea.table.tool},
 
                 ]],
             });

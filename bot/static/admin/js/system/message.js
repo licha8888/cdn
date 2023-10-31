@@ -20,8 +20,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 cols: [[
                     {field: 'cate_text', title: '群类型', search_ignore: true},
                     {field: 'content', title: '消息内容'},
-                    {field: 'sendtime_text', title: '发送时间', search: 'range'},
-                    {field: 'status', title: '状态', templet:
+                    {width:165, field: 'sendtime_text', title: '发送时间', search: 'range'},
+                    {width:115, field: 'status', title: '状态', templet:
                         function (data, option) {
                             var status = {
                                 '0':'<span class="layui-badge layui-bg-green">未发送</span>',
@@ -32,7 +32,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                         search_ignore: true
                     },
-                    {width: 250, title: '操作', templet: ea.table.tool},
+                    {width:115, title: '操作', templet: ea.table.tool},
                 ]],
             });
 
