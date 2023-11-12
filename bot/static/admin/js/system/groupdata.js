@@ -62,6 +62,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                         search_ignore: true
                     },
+                    {width:115, title: '操作', templet: ea.table.tool},
                 ]],
             });
 

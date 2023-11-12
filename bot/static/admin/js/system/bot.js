@@ -21,6 +21,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'botnickname', title: '机器人名字'},
                     {width:118, field: 'botusername', title: '机器人用户名'},
                     {width:118, field: 'adminname', title: '所属用户'},
+                    {width:100, field: 'spy', title: '监控提示', templet: ea.table.switch, search_ignore: true},
+                    {width:100, field: 'welcome', title: '进群欢迎', templet: ea.table.switch, search_ignore: true},
                     {width:100, field: 'bankinquire', title: '银行卡查询', templet: ea.table.switch, search_ignore: true},
                     {width:118, field: 'bankinquirecount', title: '查询次数'},
                     {width:145, field: 'expire_time_text', title: '过期时间', templet:

@@ -18,13 +18,13 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {width: 150, field: 'groupname', title: '群名称'},
+                    {field: 'groupname', title: '群名称'},
                     {width: 75, field: 'category.name', title: '群分类', templet:
                         function (data, option) {
                             return data.category ? data.category.name : '未分类'
                         },
                     },
-                    {width: 90, field: 'ownernickname', title: '权限人'},
+                    {width: 120, field: 'ownernickname', title: '权限人'},
                     {width: 120, field: 'botnickname', title: '机器人'},
                     {width: 90, field: 'depositcount', title: '入款笔数', templet:
                         function (data, option) {                            
