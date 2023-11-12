@@ -20,7 +20,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 cols: [[
                     {width:165, field: 'groupname', title: '群名称'},
                     {width:165, field: 'operatorname', title: '操作人'},
-                    {width:165, field: 'operatedname', title: '被操作人'},
                     {width:95, field: 'operate', title: '操作', 
                         search: 'select', 
                         selectList: [
@@ -32,6 +31,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             ['踢人出群', "踢人出群"],
                         ],
                     },
+                    {width:165, field: 'operatedname', title: '被操作人'},
                     {field: 'remark', title: '备注', search_ignore: true},
                     {width:165, field: 'create_time', title: '时间', search: 'range'},
                     {width:65, title: '操作', templet: ea.table.tool, operat:['edit']},
