@@ -18,9 +18,9 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {field: 'account', title: '商户号'},
-                    {field: 'account_name', title: '商户名称'},
-                    {field: 'change', title: '账变金额',
+                    {width:105, field: 'account', title: '商户号'},
+                    {width:105, field: 'account_name', title: '商户名称'},
+                    {width:125, field: 'change', title: '账变金额',
                         templet:
                         function (data, option) {
                             return (data.change > 0) ? "+"+data.change : data.change
@@ -35,8 +35,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                     },
                     {width:300, field: 'p_orderid', title: '平台单号', search_ignore: true},
-                    {field: 'username', title: '操作人'},
-                    {field: 'change_type', title: '账变类型',
+                    {width:125, field: 'username', title: '操作人'},
+                    {width:125, field: 'change_type', title: '账变类型',
                         search: 'select',
                         selectList: [[0, '订单入款'], [1, "后台加款"],[2, "后台扣款"],[3, "商户提款"],[4, "拒绝提款"]],
                         templet: 
@@ -52,7 +52,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return change_type[data.change_type]
                         },
                     },
-                    {field: 'create_time', title: '创建时间', search: 'range'},
+                    {width:245, field: 'create_time', title: '创建时间', search: 'range'},
                 ]],
             });
 

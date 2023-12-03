@@ -19,8 +19,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 toolbar: ['refresh'],
                 cols: [[
                     {width:105, field: 'account', title: '商户号'},
-                    {width: 180, field: 'orderid', title: '商户单号'},
-                    {width: 280, field: 'p_orderid', title: '平台单号'},
+                    {width: 280, field: 'orderid', title: '商户单号'},
+                    {width: 320, field: 'p_orderid', title: '平台单号'},
                     {width:95, field: 'code', title: '支付通道'},
                     {width:95, field: 'order_amount', title: '订单金额', search_ignore: true},
                     {width:95, field: 'amount', title: '实付金额', search_ignore: true},

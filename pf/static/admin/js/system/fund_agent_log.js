@@ -18,21 +18,21 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {field: 'account', title: '代理账号',
+                    {width:105, field: 'account', title: '代理账号',
                         templet:
                         function (data, option) {
                             return (data.account == 'admin') ? '公司运营' : data.account;
                         },
                     },
-                    {field: 'account_name', title: '代理名称'},
-                    {field: 'change', title: '账变金额', 
+                    {width:105, field: 'account_name', title: '代理名称'},
+                    {width:125, field: 'change', title: '账变金额', 
                         templet:
                         function (data, option) {
                             return (data.change > 0) ? "+"+data.change : data.change
                         },
                         search_ignore: true
                     },
-                    {field: 'balance', title: '代理分润', search_ignore: true},
+                    {width:125, field: 'balance', title: '代理分润', search_ignore: true},
                     {width:300, field: 'p_orderid', title: '平台单号', search_ignore: true},
                     {field: 'username', title: '操作人'},
                     {field: 'change_type', title: '账变类型',
@@ -51,7 +51,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return change_type[data.change_type]
                         },
                     },
-                    {field: 'create_time', title: '创建时间', search: 'range'},
+                    {width:245, field: 'create_time', title: '创建时间', search: 'range'},
                 ]],
             });
 

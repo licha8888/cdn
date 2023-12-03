@@ -18,8 +18,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {field: 'supplier_name', title: '供应商'},
-                    {field: 'change', title: '账变金额',
+                    {width:125, field: 'supplier_name', title: '供应商'},
+                    {width:125, field: 'change', title: '账变金额',
                         templet:
                         function (data, option) {
                             return (data.change > 0) ? "+"+data.change : data.change
