@@ -18,7 +18,11 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'add', 'export'],
                 cols: [[
-                    {field: 'supplier.name', title: '供应商', search: 'select', selectList: supplierList},
+                    {width:180, field: 'supplier.name', title: '供应商', search: 'select', selectList: supplierList, templet:
+                        function (data, option) {
+                            return data.supplier.name + "-" + data.supplier.account
+                        },
+                    },
                     {field: 'name', title: '通道名称', search_ignore: true},
                     {field: 'code', title: '通道编码'},
                     {field: 'percent', title: '成本费率', search_ignore: true},
@@ -34,7 +38,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'weight', title: '权重', search_ignore: true},
                     {field: 'remark', title: '备注', templet: ea.table.text},
                     {field: 'status', search: 'select', selectList: ["禁用","启用"], title: '状态', templet: ea.table.switch, search_ignore: true},
-                    {width: 250, title: '操作', templet: ea.table.tool},
+                    {width: 115, title: '操作', templet: ea.table.tool},
                 ]],
             });
 

@@ -47,6 +47,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 cols: [[
                     {field: 'name', title: '供应商名称'},
                     {field: 'code', title: '供应商编码', search_ignore: true},
+                    {field: 'account', title: '商户号'},
                     {field: 'deposit', title: '供应商押款', width: 300, templet:
                         function (data, option) {
                             return '押款:'+data.deposit
@@ -58,14 +59,14 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'need_deposit', title: '是否免押', templet:
                         function (data, option) {
                             if (data.need_deposit) {
-                                return '<span class="layui-badge layui-bg-gray">必须押款</span>'
+                                return '<span class="layui-badge layui-bg-gray">押款</span>'
                             }
                             else {
-                                return '<span class="layui-badge layui-bg-blue">可以免押</span>'
+                                return '<span class="layui-badge layui-bg-blue">免押</span>'
                             }
                         },
                         search: 'select',
-                        selectList: [[1, '必须押款'], [0, '可以免押']],
+                        selectList: [[1, '押款'], [0, '免押']],
                     },
                     {field: 'remark', title: '备注', templet: ea.table.text},
                     {field: 'status', search: 'select', selectList: ["禁用","启用"], title: '状态', templet: ea.table.switch, search_ignore: true},
