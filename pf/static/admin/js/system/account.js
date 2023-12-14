@@ -48,9 +48,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                     },
                     {width:115, field: 'pid_text', title: '所属代理'},
-                    {field: 'remark', title: '备注', templet: ea.table.text, search_ignore: true},
                     {width:65, field: 'status', search: 'select', selectList: ["禁用","启用"], title: '状态', templet: ea.table.switch, search_ignore: true},
-                    {width: 300, title: '操作', templet: ea.table.tool, operat:['edit', 'delete',
+                    {width: 300, title: '操作', templet: ea.table.tool, operat:['edit',
                         [
                             {
                                 class: 'layui-btn layui-btn-success layui-btn-xs',
@@ -73,7 +72,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                                 url: 'system.account/agent',
                                 auth: 'agent',
                             },
-                        ]
+                        ],
+                        'delete',
                     ]},
                 ]],
             });

@@ -16,7 +16,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
         index: function () {
             operat_button = [                
                 'edit',
-                'delete',
                 [
                     {
                         class: 'layui-btn layui-btn-success layui-btn-xs',
@@ -40,6 +39,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         auth: 'param',
                     },
                 ],
+                'delete',
             ]
             ea.table.render({
                 init: init,
@@ -68,7 +68,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         search: 'select',
                         selectList: [[1, '押款'], [0, '免押']],
                     },
-                    {field: 'remark', title: '备注', templet: ea.table.text},
+                    //{field: 'remark', title: '备注', templet: ea.table.text},
                     {field: 'status', search: 'select', selectList: ["禁用","启用"], title: '状态', templet: ea.table.switch, search_ignore: true},
                     {width: 300, title: '操作', operat: operat_button, templet: ea.table.tool},
                 ]],

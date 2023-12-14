@@ -516,6 +516,6 @@ table样式
     width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
-    background: goldenrod;
+    /*background: goldenrod;*/
     white-space: nowrap;
 }

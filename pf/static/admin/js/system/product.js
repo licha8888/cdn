@@ -25,7 +25,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     //{field: 'type', title: '产品类型', templet: ea.table.switch, tips: '多通道|单通道', search_ignore: true},
                     {field: 'status', search: 'select', selectList: ["禁用","启用"], title: '状态', templet: ea.table.switch, search_ignore: true},
                     {width: 250, title: '操作', templet: ea.table.tool,
-                        operat:['edit', 'delete',
+                        operat:['edit',
                             [
                                 {
                                     class: 'layui-btn layui-btn-normal layui-btn-xs',
@@ -35,6 +35,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                                     auth: 'risk',
                                 },
                             ],
+                            'delete',
                         ],
                     },                        
                    ]],
