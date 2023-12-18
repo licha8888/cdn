@@ -20,13 +20,14 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 cols: [[
                     {field: 'username', minWidth: 80, title: '登录账户'},
+                    {field: 'auth_text', title: '角色权限', search_ignore: true},
                     {field: 'contact', minWidth: 80, title: '联系方式'},
                     {field: 'login_num', minWidth: 80, title: '登录次数', search_ignore: true},
                     {field: 'remark', minWidth: 80, title: '备注信息'},
                     {field: 'status', title: '状态', width: 85, search_ignore: true, templet: ea.table.switch},
                     {field: 'create_time', minWidth: 80, title: '创建时间', search_ignore: true},
                     {
-                        width: 250,
+                        width: 150,
                         title: '操作',
                         templet: ea.table.tool,
                         operat: [
