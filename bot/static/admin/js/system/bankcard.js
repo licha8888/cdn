@@ -16,15 +16,32 @@ define(["jquery", "easy-admin"], function ($, ea) {
         index: function () {
             ea.table.render({
                 init: init,
-                toolbar: ['refresh', 'delete', 'export'],
                 cols: [[
-                    {field: 'groupname', title: '群组'},
+                    {field: 'id', title: 'ID'},
+                    {field: 'category.name', title: '所属分类', templet:
+                        function (data, option) {
+                            if (data.category === undefined || data.category === null) {
+                                return '未分类';
+                            }
+                            return data.category.name
+                        },
+                    },
                     {field: 'operatorname', title: '添加人'},
-                    {field: 'operatorusername', title: '用户名'},
-                    {field: 'min', title: '最小金额'},
-                    {field: 'max', title: '最大金额'},
-                    {field: 'bankcard', title: '银行卡'},
-                    {field: 'create_time', title: '创建时间'},
+                    {field: 'bankname', title: '银行'},
+                    {field: 'accountno', title: '卡号'},
+                    {field: 'accountname', title: '姓名'},
+                    {field: 'min', title: '金额', templet:
+                        function (data, option) {
+                            if (data.min == data.max) {
+                                return data.min
+                            } else {
+                                return data.min + "-" + data.max
+                            }
+                        },
+                        search_ignore: true
+                    },
+                    {field: 'chedui', title: '车队'},
+                    {width:165, field: 'create_time', title: '创建时间'},
                     {title: '操作', templet: ea.table.tool},
 
                 ]],
