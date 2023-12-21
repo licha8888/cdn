@@ -762,7 +762,7 @@ define(["jquery", "tableSelect", "ckeditor"], function ($, tableSelect, undefine
                 } catch (e) {
                     var value = undefined;
                 }
-                return '<span class="line-limit-length layui-bg-gray">' + value + '</span>';
+                return '<span class="line-limit-length">' + value + '</span>';
             },
             value: function (data, option) {
                 var field = option.field;
