@@ -23,8 +23,8 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'chatid', title: 'chatid'},
                     {field: 'messageid', title: 'messageid'},
                     {field: 'lasttime', title: '最后时间'},
-                    {field: 'create_time', title: '创建时间'},
-                    {width: 250, title: '操作', templet: ea.table.tool},
+                    {width:165, field: 'create_time', title: '创建时间'},
+                    {width: 125, title: '操作', templet: ea.table.tool},
 
                 ]],
             });
