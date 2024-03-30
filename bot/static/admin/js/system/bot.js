@@ -22,7 +22,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {width:118, field: 'botusername', title: '机器人用户名'},
                     {width:118, field: 'adminname', title: '所属用户'},
                     {width:100, field: 'spy', title: '监控提示', templet: ea.table.switch, search_ignore: true},
-                    {width:100, field: 'bankinquire', title: '银行卡查询', templet: ea.table.switch, search_ignore: true},
                     {width:145, field: 'expire_time_text', title: '过期时间', templet:
                         function (data, option) {
                             return (data.expire_time_text == 0) ? '未设置' : data.expire_time_text
@@ -32,7 +31,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {width:108, field: 'create_time_text', title: '启动时间', search_ignore: true},
                     {width:105, field: 'type', title: '类型', templet: ea.table.switch, tips: '私有|公共',  search_ignore:true},
                     {width:85, field: 'status', title: '状态', templet: ea.table.switch, search_ignore: true},
-                    {width:85, title: '操作', templet: ea.table.tool, operat:['edit']}
+                    {width:125, title: '操作', templet: ea.table.tool, operat:['edit', 'delete']}
                 ]],
             });
 
