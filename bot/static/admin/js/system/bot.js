@@ -18,6 +18,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 cols: [[
                     {width:108, field: 'botid', title: '机器人ID'},
+                    {width:108, field: 'cloneid', title: '克隆ID'},
                     {field: 'botnickname', title: '机器人名字'},
                     {width:118, field: 'botusername', title: '机器人用户名'},
                     {width:118, field: 'adminname', title: '所属用户'},
