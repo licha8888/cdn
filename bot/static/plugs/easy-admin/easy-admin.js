@@ -301,7 +301,11 @@ define(["jquery", "tableSelect", "ckeditor"], function ($, tableSelect, undefine
                     d.field = d.field || false;
                     d.fieldAlias = admin.parame(d.fieldAlias, d.field);
                     d.title = d.title || d.field || '';
-                    d.selectList = d.selectList || {};
+                    if (typeof d.selectList === 'function') {
+                        d.selectList = d.selectList()
+                    } else {
+                        d.selectList = d.selectList || {};
+                    }
                     d.search = admin.parame(d.search, true);
                     d.searchTip = d.searchTip || '请输入' + d.title || '';
                     d.searchValue = d.searchValue || '';

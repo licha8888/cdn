@@ -25,7 +25,16 @@ define(["jquery", "easy-admin"], function ($, ea) {
                         },
                     },
                     {width: 120, field: 'ownernickname', title: '权限人'},
-                    {width: 120, field: 'botnickname', title: '机器人'},
+                    {width: 120, field: 'botnickname', title: '机器人', 
+                        search: 'select', fieldAlias: 'botid', selectList: //fieldAlias的作用是指定 select 变量的名字
+                            function () {
+                                botidlist = []
+                                Object.entries(botlist).forEach(([key, value]) => {
+                                    botidlist.push([key, value]);
+                                })
+                                return botidlist
+                            }
+                    },
                     {width: 90, field: 'depositcount', title: '入款笔数', templet:
                         function (data, option) {                            
                             return data.depositcount // + " / " + data.adjustdepositcount

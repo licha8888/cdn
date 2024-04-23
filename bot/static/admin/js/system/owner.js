@@ -18,11 +18,20 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {width: 150, field: 'botnickname', title: '授权机器人'},
+                    {width: 150, field: 'botnickname', title: '授权机器人',
+                        search: 'select', fieldAlias: 'botid', selectList: //fieldAlias的作用是指定 select 变量的名字
+                            function () {
+                                botidlist = []
+                                Object.entries(botlist).forEach(([key, value]) => {
+                                    botidlist.push([key, value]);
+                                })
+                                return botidlist
+                            }
+                    },
                     {width: 150, field: 'nickname', title: '名字'},
-                    {width: 150, field: 'username', title: '用户名'},
-                    {width: 95, field: 'grantcount', title: '剩余授权'},
-                    {width: 95, field: 'granttype', title: '用户类型', 
+                    {width: 150, field: 'username', title: '用户名', search_ignore: true},
+                    {width: 95, field: 'grantcount', title: '剩余授权', search_ignore: true},
+                    {width: 95, field: 'granttype', title: '用户类型', search_ignore: true,
                         templet: function (data, option) {
                             var type = [
                                 '<span class="layui-badge layui-bg-gray">试用</span>',
@@ -32,7 +41,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return type[data.granttype];
                         },
                     },
-                    {width: 150, field: 'grantnickname', title: '授权人'},
+                    {width: 150, field: 'grantnickname', title: '授权人', search_ignore: true},
                     {width: 110, field: 'create_time_text', title: '创建时间', search_ignore:true},
                     {width: 180, field: 'expire_time_text', title: '过期时间', search_ignore:true},
                     {width: 80, field: 'billstatus', title: '记账', templet: ea.table.switch, tips: '开|关',  search_ignore:true},
