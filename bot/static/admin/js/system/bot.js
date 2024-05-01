@@ -60,7 +60,18 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {width:108, field: 'create_time_text', title: '启动时间', search_ignore: true},
                     {width:105, field: 'type', title: '类型', templet: ea.table.switch, tips: '私有|公共',  search_ignore:true},
                     {width:85, field: 'status', title: '状态', templet: ea.table.switch, search_ignore: true},
-                    {width:125, title: '操作', templet: ea.table.tool, operat:['edit', 'delete']}
+                    {width:165, title: '操作', templet: ea.table.tool, operat:['edit', 'delete',
+                        [
+                            {
+                                class: 'layui-btn layui-btn-normal layui-btn-xs',
+                                text: '一个月',
+                                title: '有效期延长一个月吗？',
+                                method: 'get',
+                                url: 'system.bot/period?month=1',
+                                auth: 'period',
+                            }
+                        ],
+                    ]}
                 ]],
             });
 
