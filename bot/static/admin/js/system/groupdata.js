@@ -22,13 +22,13 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {width: 150, field: 'date', title: '日期', search: 'range'},
                     {width: 120, field: 'depositcount', title: '入款笔数', templet:
                         function (data, option) {                            
-                            return data.depositcount + " / " + data.adjustdepositcount
+                            return data.depositcount
                         },
                         search_ignore: true
                     },
                     {width: 120, field: 'withdrawcount', title: '下发笔数', templet:
                         function (data, option) {                            
-                            return data.withdrawcount + " / " + data.adjustwithdrawcount
+                            return data.withdrawcount
                         },
                         search_ignore: true
                     },

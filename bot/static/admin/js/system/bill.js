@@ -18,18 +18,24 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 toolbar: ['refresh', 'export'],
                 cols: [[
-                    {width: 220, field: 'groupname', title: '群名称'},
+                    {width: 220, field: 'group.groupname', title: '群名称'},
                     {field: 'replyname', title: '回复人', search_ignore: true},
                     {field: 'operatorname', title: '操作人', search_ignore: true},
-                    {field: 'billtype', title: '类型', templet:
+                    {width: 115, field: 'billtype', title: '类型', templet:
                         function (data, option) {
                             var billtype = {
                                 'deposit':'<span class="layui-badge layui-bg-green">入款</span>',
                                 'withdraw': '<span class="layui-badge layui-bg-blue">下发</span>',
                                 'adjust_deposit': '<span class="layui-badge layui-bg-gray">入款修正</span>',
                                 'adjust_withdraw': '<span class="layui-badge layui-bg-gray">下发修正</span>',
+
+                                'canceldeposit':'<span class="layui-badge layui-bg-gray">取消入款</span>',
+                                'cancelwithdraw': '<span class="layui-badge layui-bg-gray">取消下发</span>',
+                                'canceladjust_deposit': '<span class="layui-badge layui-bg-gray">取消入款修正</span>',
+                                'canceladjust_withdraw': '<span class="layui-badge layui-bg-gray">取消下发修正</span>',
                             };
-                            return billtype[data.billtype];
+
+                            return billtype[(data.cancel ? 'cancel' : '') + data.billtype];
                         },
                         selectList: [['deposit', '入款'], ['withdraw', '下发'], ['adjust_deposit', '入款修正'], ['adjust_withdraw', '下发修正']],
                         search_ignore: true,

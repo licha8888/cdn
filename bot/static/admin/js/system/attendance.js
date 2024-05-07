@@ -25,7 +25,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'remark', title: '备注', templet: ea.table.text},
                     {width:165, field: 'create_time', title: '考勤时间'},
                     {width: 125, title: '操作', templet: ea.table.tool},
-
                 ]],
             });
 

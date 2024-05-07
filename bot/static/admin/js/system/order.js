@@ -17,7 +17,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
             ea.table.render({
                 init: init,
                 cols: [[
-                    {width: 240, field: 'groupname', title: '群组名称'},
+                    {width: 240, field: 'group.groupname', title: '群组名称'},
                     {width: 250, field: 'orderid', title: '订单编号'},
                     {width: 90, field: 'code', title: '支付通道'},
                     {field: 'order_amount', title: '订单金额'},
