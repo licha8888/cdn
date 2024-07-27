@@ -39,9 +39,9 @@ define(["jquery", "easy-admin"], function ($, ea) {
                                 return cloneidlist
                             }
                     },
-                    {field: 'botnickname', title: '机器人名字', search_ignore: true},
-                    {width:118, field: 'botusername', title: '机器人用户名', search_ignore: true},
-                    {width:118, field: 'adminname', title: '所属用户', search: 'select', selectList:
+                    {field: 'botnickname', title: '名字', search_ignore: true},
+                    {width:118, field: 'botusername', title: '用户名', search_ignore: true},
+                    {width:118, field: 'adminname', title: '所属平台', search: 'select', selectList:
                         function () {
                             list = []
                             Object.entries(platformlist).forEach(([key, value]) => {
@@ -50,15 +50,14 @@ define(["jquery", "easy-admin"], function ($, ea) {
                             return list
                         }
                     },
-                    {width:100, field: 'spy', title: '监控提示', templet: ea.table.switch, search_ignore: true},
+                    {width:118, field: 'belongadmin', title: '用户组', search_ignore: true},
+                    {field: 'amount', title: '续费金额', search_ignore: true},
                     {width:145, field: 'expire_time_text', title: '过期时间', templet:
                         function (data, option) {
                             return (data.expire_time_text == 0) ? '未设置' : data.expire_time_text
                         },
                         search_ignore: true
                     },
-                    {width:108, field: 'create_time_text', title: '启动时间', search_ignore: true},
-                    {width:105, field: 'type', title: '类型', templet: ea.table.switch, tips: '私有|公共',  search_ignore:true},
                     {width:85, field: 'status', title: '状态', templet: ea.table.switch, search_ignore: true},
                     {width:165, title: '操作', templet: ea.table.tool, operat:['edit', 'delete',
                         [
